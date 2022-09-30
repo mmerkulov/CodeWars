@@ -23,3 +23,12 @@ tpl[3].append(4)
 print(tpl)
 # tpl[4].append(55)   # так нельзя делать, потому что кортеж не изменяемый тип данных
 print(tpl)
+
+
+def multiply(num):
+    return lambda x: x + num
+
+
+multiply_by_10 = multiply(10)
+res = multiply_by_10(5)
+print(multiply_by_10, res)
