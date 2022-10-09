@@ -9,35 +9,15 @@ import random
 
 
 class Fighter(object):
+    def __init__(self, nickname, health, damage_per_attack):
+        self.nickname = nickname
+        self.health = health
+        self.damage_per_attack = damage_per_attack
 
-    def __init__(self, nickname='', health=0, damage_per_attack=0):
-        self.__nickname = nickname
-        self.__health = health
-        self.__damage_per_attack = damage_per_attack
+    def __str__(self):
+        return "Fighter({}, {}, {})".format(self.nickname, self.health, self.damage_per_attack)
 
-    @property
-    def nickname(self):
-        return self.__nickname
-
-    @property
-    def health(self):
-        return self.__health
-
-    @property
-    def damage_per_attack(self):
-        return self.__damage_per_attack
-
-    @nickname.setter
-    def nickname(self, nickname):
-        self.__nickname = nickname
-
-    @health.setter
-    def health(self, health):
-        self.__health = health
-
-    @damage_per_attack.setter
-    def damage_per_attack(self, damage_per_attack):
-        self.__damage_per_attack = damage_per_attack
+    __repr__ = __str__
 
 
 def fighting(fighter1, fighter2, first_name):
@@ -88,6 +68,7 @@ def fighting(fighter1, fighter2, first_name):
 fighter1 = Fighter(nickname='Harald', health=20, damage_per_attack=5)
 fighter2 = Fighter(nickname='Harry', health=5, damage_per_attack=4)
 print(fighting(fighter1, fighter2, fighter2.nickname))
+print(fighter1, fighter2)
 # 4
 # fighter1 = Fighter(nickname='Harald', health=20, damage_per_attack=5)
 # fighter2 = Fighter(nickname='Harry', health=5, damage_per_attack=4)
