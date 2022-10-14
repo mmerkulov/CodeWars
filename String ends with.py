@@ -8,6 +8,12 @@
 def solution(string, ending):
     return True if string[-len(ending):] == ending or len(ending) == 0 else False
 
+
+def solution_true(string='', ending=''):
+    return string.endswith(ending)
+
+
 x = 'abcde'
 y = ''
 print(solution(x, y))
+print(solution_true(x, y))
