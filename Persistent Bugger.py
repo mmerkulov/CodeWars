@@ -7,6 +7,8 @@
 # 4 --> 0 (because 4 is already a one-digit number)
 
 # 6 kyu = 147
+from functools import reduce
+
 
 def persistence(n):
     num_list = list(str(n))
@@ -22,6 +24,17 @@ def persistence(n):
     return result
 
 
+# Не моё решение, через функцию reduce и генератор сделан, вместо цикла.
+def persistence1(n):
+    nums = [int(x) for x in str(n)]
+    sist = 0
+    while len(nums) > 1:
+        newNum = reduce(lambda x, y: x * y, nums)
+        nums = [int(x) for x in str(newNum)]
+        sist = sist + 1
+    return sist
 
-x = 25
+
+x = 999
 print(persistence(x))
+print(persistence1(x))
