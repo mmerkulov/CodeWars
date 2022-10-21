@@ -35,6 +35,14 @@ def persistence1(n):
     return sist
 
 
+def paperwork(n, m):
+    return n * m if n > 0 and m > 0 else 0
+
+
 x = 999
 print(persistence(x))
 print(persistence1(x))
+
+q1 = 5
+q2 = -5
+print((paperwork(q1, q2)))
