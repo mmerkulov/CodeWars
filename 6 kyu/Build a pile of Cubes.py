@@ -14,16 +14,43 @@
 
 
 def find_nb(m):
-    pass
+    answer = 1
+    while m > 0:
+        answer_pow = pow(answer, 3)
+        m -= answer_pow
+        answer += 1
+        # print(f'answer = {answer}', f'answer_pow = {answer_pow}')
 
+        if m < 0:
+            #print('На выход!!!')
+            return -1
 
+    return answer - 1
 
+def find_nb_recursive(m, answer):
+    if m < 0:
+        return -1
+    else:
+        answer_pow = pow(answer, 3)
+        m -= answer_pow
+        answer += 1
 
-# for i in range(x, 0, -1):
-#     z = pow(i, 3)
-#     s += z
-# print(s)
+# x = pow(3, 3)
+# print(x)
+# y = pow(27, 1 / 3)
+# print(y)
 
+z = 135440716410000
+print(find_nb(z))
+#
+# 1 ** 3 = 1
+# 36 - 1 = 35
+# 2 ** 3 = 8
+# 35 - 8 = 27
+# 3 ** 3 = 27
+# 27 - 27 = 0
 
-x = 1071225
-s = 0
+# 1^3=1
+# 2^3=8
+# 3^3=27
+#    =36
