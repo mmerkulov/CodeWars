@@ -18,32 +18,22 @@
 # (Condition 2) not fulfilled).
 
 
-# (v^2)/2 = gh
-
-# не моё решение
-def bouncingBallNotMy(h, bounce, window):
-    if not (h > 0 and (bounce > 0 and bounce < 1) and window < h):
-        print('return -1')
-        return -1
-    else:
-        if h < window:
-            print('return +1')
-            return 1
-        else:
-            print('return 1')
-            print((h * bounce), bounce, window)
-            return 2 + bouncingBallNotMy((h * bounce), bounce, window)
-
-
+# не моё решение // recursive
 def bouncingBall(h, bounce, window):
+    if h <= 0 or bounce <= 0 or bounce >= 1 or window >= h:
+        return -1
+    return 2 + bouncingBall(h * bounce, bounce, window)
+
+
+def bouncing_ball(h, bounce, window):
     amount = 1
     if not (h > 0 and (0 < bounce < 1) and window < h):
         return -1
 
     while h > window:
-        amount += 1
         h = h * bounce
-        print(h)
+        if h > window:
+            amount += 2
 
     return amount
 
@@ -52,4 +42,4 @@ h = 30
 bounce = 0.75
 window = 1.5
 # print(bouncingBallNotMy(h, bounce, window))
-print(bouncingBall(h, bounce, window))
+print(bouncing_ball(h, bounce, window))
