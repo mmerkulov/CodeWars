@@ -11,11 +11,11 @@ def abbreviate_name(full_name):
     short_name = ''
     for x in list_words:
         short_name += x[0:1] + '.'
-    return short_name[:3].upper()
+    return short_name[:4].upper()
 
 
 def abbrevName(name):
-    return '.'.join(w[0] for w in name.split()).upper()
+    return '.'.join(w[0] for w in name.split()).upper() + '.'
 
 
 name = 'Sam Harris'

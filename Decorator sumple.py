@@ -1,9 +1,10 @@
 # Простой декоратор
 def my_decorator(my_func):
 
-    def inner(value):
-        value *= 2
+    def inner():
+        print('Befor Hello')
         my_func(value)
+        print('After Hello')
 
     return inner
 
@@ -29,5 +30,5 @@ def adder(**nums):
     print(sum(nums.values()))
 
 # Вызов декорированных функций
-#print_hi('a')
-#print(adder(a=1, b=2))
+print_hi()
+print(adder(a=2, b=3))

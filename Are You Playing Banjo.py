@@ -12,5 +12,5 @@ def do_you_playing_bonjo(name=''):
 
 name = 'Roman'
 name = 'Mikhail'
-name = 'rouse'
+name = 'Rouse'
 print(do_you_playing_bonjo(name))
