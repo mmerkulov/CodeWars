@@ -13,9 +13,9 @@
 # #Output
 # The middle character(s) of the word represented as a string.
 
-def get_middle(s):
+def get_middle(s: str) -> str:
     return s[len(s) // 2 - 1:len(s) // 2 + 1] if len(s) % 2 == 0 else s[len(s) // 2:len(s) // 2 + 1]
 
 
-word = 'a'
+word = 'abqc'
 print(get_middle(word))

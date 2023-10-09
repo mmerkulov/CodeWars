@@ -38,12 +38,12 @@ def fib_get_list(x: int = 0) -> list:
     return result
 
 
-z = 15
+z = 10
 
 print(f'z => {fib_recursion(z)}')
 
-print(fib_get_list(z))
-
-fibonacci_of = Fibonacci()
-print(f'x=> {fibonacci_of(z)}')
-print([fibonacci_of(n) for n in range(z)])
+# print(fib_get_list(z))
+#
+# fibonacci_of = Fibonacci()
+# print(f'x=> {fibonacci_of(z)}')
+# print([fibonacci_of(n) for n in range(z)])

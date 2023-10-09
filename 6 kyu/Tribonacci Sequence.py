@@ -27,6 +27,7 @@ def tribonacci(signature: list, n: int = 0) -> list:
         result.append(new_x)
     return result
 
+
 # Не моё
 def tribonacci1(signature, n):
     res = signature[:n]
@@ -45,3 +46,4 @@ def tribonacci1(signature, n):
 # s = [300, 200, 100]
 s = [124, 22, 184]
 print(tribonacci(signature=s, n=3))
+print(tribonacci1(signature=s, n=3))
