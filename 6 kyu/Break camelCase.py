@@ -28,3 +28,4 @@ def solution1(s):
 
 print(solution('camelCasing'))
 print(solution1('camelCasing'))
+                                                                               
